@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A2FB92CF-035F-4976-B68E-DBFF89EDA204}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MedicalStoreManagementSystem</RootNamespace>
+    <AssemblyName>MedicalStoreManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v18.1" />
+    <Reference Include="DevExpress.Data.v18.1" />
+    <Reference Include="DevExpress.Utils.v18.1" />
+    <Reference Include="DevExpress.Sparkline.v18.1.Core" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.1" />
+    <Reference Include="DevExpress.Printing.v18.1.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VS2005Extender, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\VS2005Extender.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\CommonCodeClass.cs" />
+    <Compile Include="Code\DataAccessLayer.cs" />
+    <Compile Include="Code\DatabaseInitializer.cs" />
+    <Compile Include="Forms\AuthenticationForms\frm_UserCreateUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuthenticationForms\frm_UserCreateUpdateForm.Designer.cs">
+      <DependentUpon>frm_UserCreateUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AuthenticationForms\frm_UserLoginForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuthenticationForms\frm_UserLoginForm2.Designer.cs">
+      <DependentUpon>frm_UserLoginForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_AddEmployee.Designer.cs">
+      <DependentUpon>frm_AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Employees.Designer.cs">
+      <DependentUpon>frm_Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_MainForm.Designer.cs">
+      <DependentUpon>frm_MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Category.Designer.cs">
+      <DependentUpon>frm_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfigForms\frm_CompanyProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigForms\frm_CompanyProfile.Designer.cs">
+      <DependentUpon>frm_CompanyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PurchaseForms\frm_Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PurchaseForms\frm_Supplier.Designer.cs">
+      <DependentUpon>frm_Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StockForms\frm_Medicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StockForms\frm_Medicine.Designer.cs">
+      <DependentUpon>frm_Medicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StockForms\frm_StockGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StockForms\frm_StockGeneral.Designer.cs">
+      <DependentUpon>frm_StockGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AuthenticationForms\frm_UserCreateUpdateForm.resx">
+      <DependentUpon>frm_UserCreateUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AuthenticationForms\frm_UserLoginForm2.resx">
+      <DependentUpon>frm_UserLoginForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_AddEmployee.resx">
+      <DependentUpon>frm_AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Employees.resx">
+      <DependentUpon>frm_Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_MainForm.resx">
+      <DependentUpon>frm_MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Category.resx">
+      <DependentUpon>frm_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfigForms\frm_CompanyProfile.resx">
+      <DependentUpon>frm_CompanyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PurchaseForms\frm_Supplier.resx">
+      <DependentUpon>frm_Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StockForms\frm_Medicine.resx">
+      <DependentUpon>frm_Medicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StockForms\frm_StockGeneral.resx">
+      <DependentUpon>frm_StockGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Files\" />
+    <Folder Include="Content\Images\" />
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
