@@ -37,7 +37,6 @@ D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreM
 D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll
 D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll
 D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll
-D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.csprojAssemblyReference.cache
 D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Properties.Resources.resources
 D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.csproj.GenerateResource.cache
 D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.csproj.CoreCompileInputs.cache
@@ -47,3 +46,19 @@ D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreM
 D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.frm_MainForm.resources
 D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.frm_Category.resources
 D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.exe.licenses
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.Other_Forms.frm_CompanyProfile.resources
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.frm_Employees.resources
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.frm_AddEmployee.resources
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\bin\Debug\DevExpress.XtraBars.v18.1.dll
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\bin\Debug\DevExpress.XtraBars.v18.1.xml
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.PurchaseForms.frm_Supplier.resources
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.AuthenticationForms.frm_UserLoginForm2.resources
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.csprojAssemblyReference.cache
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.AuthenticationForms.frm_UserCreateUpdateForm.resources
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.StockForms.frm_StockGeneral.resources
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.StockForms.frm_Medicine.resources
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.PurchaseForms.frm_NewPurchase.resources

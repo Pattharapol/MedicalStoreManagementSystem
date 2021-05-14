@@ -6,6 +6,8 @@ using DevExpress.UserSkins;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
 using MedicalStoreManagementSystem.Forms;
+using MedicalStoreManagementSystem.Code;
+using MedicalStoreManagementSystem.Forms.AuthenticationForms;
 
 namespace MedicalStoreManagementSystem
 {
@@ -17,10 +19,12 @@ namespace MedicalStoreManagementSystem
         [STAThread]
         static void Main()
         {
+            DatabaseInitializer.RegisterAdmin();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
+            //Application.Run(new frm_UserLoginForm2());
             Application.Run(new frm_MainForm());
         }
     }

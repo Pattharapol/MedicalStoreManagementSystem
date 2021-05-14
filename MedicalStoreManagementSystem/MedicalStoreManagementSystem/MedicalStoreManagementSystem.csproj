@@ -37,6 +37,7 @@
     <Reference Include="DevExpress.Data.v18.1" />
     <Reference Include="DevExpress.Utils.v18.1" />
     <Reference Include="DevExpress.Sparkline.v18.1.Core" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v18.1" />
     <Reference Include="DevExpress.Printing.v18.1.Core" />
     <Reference Include="System" />
@@ -59,7 +60,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\CommonCodeClass.cs" />
     <Compile Include="Code\DataAccessLayer.cs" />
+    <Compile Include="Code\DatabaseInitializer.cs" />
+    <Compile Include="Forms\AuthenticationForms\frm_UserCreateUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuthenticationForms\frm_UserCreateUpdateForm.Designer.cs">
+      <DependentUpon>frm_UserCreateUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AuthenticationForms\frm_UserLoginForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuthenticationForms\frm_UserLoginForm2.Designer.cs">
+      <DependentUpon>frm_UserLoginForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_AddEmployee.Designer.cs">
+      <DependentUpon>frm_AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Employees.Designer.cs">
+      <DependentUpon>frm_Employees.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frm_MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,13 +99,70 @@
     <Compile Include="Forms\frm_Category.Designer.cs">
       <DependentUpon>frm_Category.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ConfigForms\frm_CompanyProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigForms\frm_CompanyProfile.Designer.cs">
+      <DependentUpon>frm_CompanyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PurchaseForms\frm_NewPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PurchaseForms\frm_NewPurchase.Designer.cs">
+      <DependentUpon>frm_NewPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PurchaseForms\frm_Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PurchaseForms\frm_Supplier.Designer.cs">
+      <DependentUpon>frm_Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StockForms\frm_Medicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StockForms\frm_Medicine.Designer.cs">
+      <DependentUpon>frm_Medicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StockForms\frm_StockGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StockForms\frm_StockGeneral.Designer.cs">
+      <DependentUpon>frm_StockGeneral.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AuthenticationForms\frm_UserCreateUpdateForm.resx">
+      <DependentUpon>frm_UserCreateUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AuthenticationForms\frm_UserLoginForm2.resx">
+      <DependentUpon>frm_UserLoginForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_AddEmployee.resx">
+      <DependentUpon>frm_AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Employees.resx">
+      <DependentUpon>frm_Employees.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_MainForm.resx">
       <DependentUpon>frm_MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_Category.resx">
       <DependentUpon>frm_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfigForms\frm_CompanyProfile.resx">
+      <DependentUpon>frm_CompanyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PurchaseForms\frm_NewPurchase.resx">
+      <DependentUpon>frm_NewPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PurchaseForms\frm_Supplier.resx">
+      <DependentUpon>frm_Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StockForms\frm_Medicine.resx">
+      <DependentUpon>frm_Medicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StockForms\frm_StockGeneral.resx">
+      <DependentUpon>frm_StockGeneral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
