@@ -104,5 +104,94 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             }
             
         }
+
+        private void cmbSelectProduct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbSelectProduct.Items.Count > 0)
+            {
+                if(cmbSelectProduct.SelectedIndex > 0)
+                {
+                    DataTable dt = new DataTable();
+                    if(rdbGeneral.Checked == true)
+                    {
+                        dt = CommonCodeClass.GetProductCurrentDetail(cmbSelectProduct.Text.Trim(), "G");
+                    }
+
+                    if (rdbMedicine.Checked == true)
+                    {
+                        dt = CommonCodeClass.GetProductCurrentDetail(cmbSelectProduct.Text.Trim(), "M");
+                    }
+
+                    if(dt.Rows.Count > 0)
+                    {
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            lblSelectProductName.Text = cmbSelectProduct.Text;
+                            lblSelectProductQUantity.Text = row[1].ToString();
+                            lblSelectProductUnitPrice.Text = row[2].ToString();
+                        }
+                    }
+                    else
+                    {
+                        lblSelectProductName.Text = "Not Available";
+                        lblSelectProductQUantity.Text = "0";
+                        lblSelectProductUnitPrice.Text = "0.00";
+                    }
+                }
+                else
+                {
+                    lblSelectProductName.Text = "Not Available";
+                    lblSelectProductQUantity.Text = "0";
+                    lblSelectProductUnitPrice.Text = "0.00";
+                }
+            }
+            else
+            {
+                lblSelectProductName.Text = "Not Available";
+                lblSelectProductQUantity.Text = "0";
+                lblSelectProductUnitPrice.Text = "0.00";
+            }
+        }
+
+        private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // only number
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtPurchasePrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // only number and decimal point
+            if ((!char.IsControl(e.KeyChar)) && (!char.IsDigit(e.KeyChar)) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSalePrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // only number and decimal point
+            if ((!char.IsControl(e.KeyChar)) && (!char.IsDigit(e.KeyChar)) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

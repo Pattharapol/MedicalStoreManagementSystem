@@ -47,7 +47,7 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblSelectProductUnitPrice = new System.Windows.Forms.Label();
-            this.lblSelectProductPrice = new System.Windows.Forms.Label();
+            this.lblSelectProductQUantity = new System.Windows.Forms.Label();
             this.lblSelectProductName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -85,6 +85,16 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             this.lnkEditItem = new System.Windows.Forms.LinkLabel();
             this.lnkDeleteItem = new System.Windows.Forms.LinkLabel();
             this.ep = new System.Windows.Forms.ErrorProvider(this.components);
+            this.colCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCompany = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBatchNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMFG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colExpDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPurchasePRice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSalePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colItemCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -256,7 +266,7 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lblSelectProductUnitPrice);
-            this.groupBox3.Controls.Add(this.lblSelectProductPrice);
+            this.groupBox3.Controls.Add(this.lblSelectProductQUantity);
             this.groupBox3.Controls.Add(this.lblSelectProductName);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label7);
@@ -278,15 +288,15 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             this.lblSelectProductUnitPrice.Size = new System.Drawing.Size(200, 24);
             this.lblSelectProductUnitPrice.TabIndex = 2;
             // 
-            // lblSelectProductPrice
+            // lblSelectProductQUantity
             // 
-            this.lblSelectProductPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblSelectProductPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lblSelectProductPrice.Location = new System.Drawing.Point(107, 60);
-            this.lblSelectProductPrice.Name = "lblSelectProductPrice";
-            this.lblSelectProductPrice.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            this.lblSelectProductPrice.Size = new System.Drawing.Size(200, 24);
-            this.lblSelectProductPrice.TabIndex = 1;
+            this.lblSelectProductQUantity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSelectProductQUantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lblSelectProductQUantity.Location = new System.Drawing.Point(107, 60);
+            this.lblSelectProductQUantity.Name = "lblSelectProductQUantity";
+            this.lblSelectProductQUantity.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.lblSelectProductQUantity.Size = new System.Drawing.Size(200, 24);
+            this.lblSelectProductQUantity.TabIndex = 1;
             // 
             // lblSelectProductName
             // 
@@ -364,6 +374,7 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClear
             // 
@@ -422,6 +433,7 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             this.txtSalePrice.Name = "txtSalePrice";
             this.txtSalePrice.Size = new System.Drawing.Size(225, 22);
             this.txtSalePrice.TabIndex = 7;
+            this.txtSalePrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalePrice_KeyPress);
             // 
             // txtPurchasePrice
             // 
@@ -430,6 +442,7 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             this.txtPurchasePrice.Name = "txtPurchasePrice";
             this.txtPurchasePrice.Size = new System.Drawing.Size(225, 22);
             this.txtPurchasePrice.TabIndex = 6;
+            this.txtPurchasePrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPurchasePrice_KeyPress);
             // 
             // txtQuantity
             // 
@@ -438,6 +451,7 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(225, 22);
             this.txtQuantity.TabIndex = 5;
+            this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
             // 
             // rdbGeneral
             // 
@@ -474,6 +488,7 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             this.cmbSelectProduct.Name = "cmbSelectProduct";
             this.cmbSelectProduct.Size = new System.Drawing.Size(225, 24);
             this.cmbSelectProduct.TabIndex = 2;
+            this.cmbSelectProduct.SelectedIndexChanged += new System.EventHandler(this.cmbSelectProduct_SelectedIndexChanged);
             // 
             // label17
             // 
@@ -567,6 +582,17 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             this.dgvPurchaseItemList.BackgroundColor = System.Drawing.Color.White;
             this.dgvPurchaseItemList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvPurchaseItemList.ColumnHeadersHeight = 35;
+            this.dgvPurchaseItemList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colCategory,
+            this.colProduct,
+            this.colCompany,
+            this.colBatchNo,
+            this.colMFG,
+            this.colExpDate,
+            this.colPurchasePRice,
+            this.colSalePrice,
+            this.colQuantity,
+            this.colItemCost});
             this.dgvPurchaseItemList.Location = new System.Drawing.Point(6, 45);
             this.dgvPurchaseItemList.MultiSelect = false;
             this.dgvPurchaseItemList.Name = "dgvPurchaseItemList";
@@ -690,6 +716,85 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             // 
             this.ep.ContainerControl = this;
             // 
+            // colCategory
+            // 
+            this.colCategory.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colCategory.HeaderText = "Type";
+            this.colCategory.Name = "colCategory";
+            this.colCategory.ReadOnly = true;
+            this.colCategory.Width = 56;
+            // 
+            // colProduct
+            // 
+            this.colProduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colProduct.HeaderText = "Product";
+            this.colProduct.Name = "colProduct";
+            this.colProduct.ReadOnly = true;
+            // 
+            // colCompany
+            // 
+            this.colCompany.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colCompany.HeaderText = "Company";
+            this.colCompany.Name = "colCompany";
+            this.colCompany.ReadOnly = true;
+            this.colCompany.Width = 76;
+            // 
+            // colBatchNo
+            // 
+            this.colBatchNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colBatchNo.HeaderText = "Batch No";
+            this.colBatchNo.Name = "colBatchNo";
+            this.colBatchNo.ReadOnly = true;
+            this.colBatchNo.Width = 71;
+            // 
+            // colMFG
+            // 
+            this.colMFG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colMFG.HeaderText = "Mfg Date";
+            this.colMFG.Name = "colMFG";
+            this.colMFG.ReadOnly = true;
+            this.colMFG.Width = 70;
+            // 
+            // colExpDate
+            // 
+            this.colExpDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colExpDate.HeaderText = "Exp Date";
+            this.colExpDate.Name = "colExpDate";
+            this.colExpDate.ReadOnly = true;
+            this.colExpDate.Width = 70;
+            // 
+            // colPurchasePRice
+            // 
+            this.colPurchasePRice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colPurchasePRice.HeaderText = "Purchase Price";
+            this.colPurchasePRice.Name = "colPurchasePRice";
+            this.colPurchasePRice.ReadOnly = true;
+            this.colPurchasePRice.Width = 96;
+            // 
+            // colSalePrice
+            // 
+            this.colSalePrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colSalePrice.HeaderText = "Sale Price";
+            this.colSalePrice.Name = "colSalePrice";
+            this.colSalePrice.ReadOnly = true;
+            this.colSalePrice.Width = 74;
+            // 
+            // colQuantity
+            // 
+            this.colQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colQuantity.HeaderText = "Quantity";
+            this.colQuantity.Name = "colQuantity";
+            this.colQuantity.ReadOnly = true;
+            this.colQuantity.Width = 71;
+            // 
+            // colItemCost
+            // 
+            this.colItemCost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colItemCost.HeaderText = "Item Cost";
+            this.colItemCost.Name = "colItemCost";
+            this.colItemCost.ReadOnly = true;
+            this.colItemCost.Width = 70;
+            // 
             // frm_NewPurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -740,7 +845,7 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
         private System.Windows.Forms.DateTimePicker dtpPurchaseDate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblSelectProductUnitPrice;
-        private System.Windows.Forms.Label lblSelectProductPrice;
+        private System.Windows.Forms.Label lblSelectProductQUantity;
         private System.Windows.Forms.Label lblSelectProductName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
@@ -780,5 +885,15 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
         private System.Windows.Forms.TextBox txtDiscount;
         private System.Windows.Forms.TextBox txtTotalAmount;
         private System.Windows.Forms.ErrorProvider ep;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCompany;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBatchNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMFG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colExpDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPurchasePRice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSalePrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colItemCost;
     }
 }
