@@ -72,7 +72,9 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lnkDeleteItem = new System.Windows.Forms.LinkLabel();
             this.dgvPurchaseItemList = new System.Windows.Forms.DataGridView();
+            this.lnkEditItem = new System.Windows.Forms.LinkLabel();
             this.btnClearForm = new System.Windows.Forms.Button();
             this.btnNewPurchase = new System.Windows.Forms.Button();
             this.btnFinalizeProduct = new System.Windows.Forms.Button();
@@ -82,8 +84,6 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             this.txtDiscount = new System.Windows.Forms.TextBox();
             this.txtTotalAmount = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.lnkEditItem = new System.Windows.Forms.LinkLabel();
-            this.lnkDeleteItem = new System.Windows.Forms.LinkLabel();
             this.ep = new System.Windows.Forms.ErrorProvider(this.components);
             this.colCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -571,6 +571,18 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Purchase Item List";
             // 
+            // lnkDeleteItem
+            // 
+            this.lnkDeleteItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnkDeleteItem.AutoSize = true;
+            this.lnkDeleteItem.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkDeleteItem.Location = new System.Drawing.Point(471, 16);
+            this.lnkDeleteItem.Name = "lnkDeleteItem";
+            this.lnkDeleteItem.Size = new System.Drawing.Size(94, 13);
+            this.lnkDeleteItem.TabIndex = 1;
+            this.lnkDeleteItem.TabStop = true;
+            this.lnkDeleteItem.Text = "Delete Select Item";
+            // 
             // dgvPurchaseItemList
             // 
             this.dgvPurchaseItemList.AllowUserToAddRows = false;
@@ -601,6 +613,18 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             this.dgvPurchaseItemList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPurchaseItemList.Size = new System.Drawing.Size(559, 417);
             this.dgvPurchaseItemList.TabIndex = 2;
+            // 
+            // lnkEditItem
+            // 
+            this.lnkEditItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnkEditItem.AutoSize = true;
+            this.lnkEditItem.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkEditItem.Location = new System.Drawing.Point(367, 16);
+            this.lnkEditItem.Name = "lnkEditItem";
+            this.lnkEditItem.Size = new System.Drawing.Size(81, 13);
+            this.lnkEditItem.TabIndex = 0;
+            this.lnkEditItem.TabStop = true;
+            this.lnkEditItem.Text = "Edit Select Item";
             // 
             // btnClearForm
             // 
@@ -688,30 +712,6 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             this.label22.TabIndex = 0;
             this.label22.Text = "Total Amount";
             // 
-            // lnkEditItem
-            // 
-            this.lnkEditItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnkEditItem.AutoSize = true;
-            this.lnkEditItem.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.lnkEditItem.Location = new System.Drawing.Point(367, 16);
-            this.lnkEditItem.Name = "lnkEditItem";
-            this.lnkEditItem.Size = new System.Drawing.Size(81, 13);
-            this.lnkEditItem.TabIndex = 0;
-            this.lnkEditItem.TabStop = true;
-            this.lnkEditItem.Text = "Edit Select Item";
-            // 
-            // lnkDeleteItem
-            // 
-            this.lnkDeleteItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnkDeleteItem.AutoSize = true;
-            this.lnkDeleteItem.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.lnkDeleteItem.Location = new System.Drawing.Point(471, 16);
-            this.lnkDeleteItem.Name = "lnkDeleteItem";
-            this.lnkDeleteItem.Size = new System.Drawing.Size(94, 13);
-            this.lnkDeleteItem.TabIndex = 1;
-            this.lnkDeleteItem.TabStop = true;
-            this.lnkDeleteItem.Text = "Delete Select Item";
-            // 
             // ep
             // 
             this.ep.ContainerControl = this;
@@ -726,10 +726,11 @@ namespace MedicalStoreManagementSystem.Forms.PurchaseForms
             // 
             // colProduct
             // 
-            this.colProduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colProduct.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colProduct.HeaderText = "Product";
             this.colProduct.Name = "colProduct";
             this.colProduct.ReadOnly = true;
+            this.colProduct.Width = 69;
             // 
             // colCompany
             // 
