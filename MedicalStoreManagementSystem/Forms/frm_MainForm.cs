@@ -85,5 +85,11 @@ namespace MedicalStoreManagementSystem.Forms
             frm_Medicine frm = new frm_Medicine();
             frm.ShowDialog();
         }
+
+        private void newPurchaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_NewPurchase frm = new frm_NewPurchase();
+            frm.ShowDialog();
+        }
     }
 }

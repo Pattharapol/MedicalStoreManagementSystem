@@ -57,7 +57,8 @@ D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreM
 D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll
 D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.PurchaseForms.frm_Supplier.resources
 D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.AuthenticationForms.frm_UserLoginForm2.resources
-D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.csprojAssemblyReference.cache
 D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.AuthenticationForms.frm_UserCreateUpdateForm.resources
 D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.StockForms.frm_StockGeneral.resources
 D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.StockForms.frm_Medicine.resources
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.Forms.PurchaseForms.frm_NewPurchase.resources
+D:\Projects\C# Desktop\Medical Store Management System\Application\MedicalStoreManagementSystem\MedicalStoreManagementSystem\obj\Debug\MedicalStoreManagementSystem.csprojAssemblyReference.cache
